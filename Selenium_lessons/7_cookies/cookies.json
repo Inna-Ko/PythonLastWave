@@ -1,0 +1,242 @@
+[
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375174,
+        "httpOnly": false,
+        "name": "_ga_ESH3WRCK3J",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS2.1.s1746815174$o1$g0$t1746815174$j60$l0$h0"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1754591174,
+        "httpOnly": false,
+        "name": "_fbp",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "fb.1.1746815174539.612578002532691805"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_group_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX18hcbhUGnm5H9Sek3N%2BXxlH6ZeMWxoDyUM%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1746887174,
+        "httpOnly": false,
+        "name": "_ym_isad",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "2"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351173,
+        "httpOnly": false,
+        "name": "rl_session",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX1%2Bx00sLAvMLryTjcpxLZMytV1eSg8ta3S%2BbRbwEY2n0IZTnY33UliRiIP%2FjwqRFJmVloWDpzNkNXz%2FfAGVNF5yTE5UXhWWMb5jvu8xhBHZ3uPJvyrzou%2FfHYrka6%2FUgVFtHl30LrbC%2FVQ%3D%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_group_trait",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX18ROmWEUPUqSjxa95O3S%2FMpPxetQxP%2FKOs%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351173,
+        "httpOnly": false,
+        "name": "_ym_d",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1746815174"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375173,
+        "httpOnly": false,
+        "name": "mindboxDeviceUUID",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "bb4ea5e2-71ce-4d98-ae4e-4f445dbe1e77"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375173,
+        "httpOnly": false,
+        "name": "kuf_agr",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "{%22advertisements%22:true%2C%22advertisements-non-personalized%22:false%2C%22statistic%22:true%2C%22mindbox%22:true}"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1749407173,
+        "httpOnly": false,
+        "name": "kufar_cart_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "b19fa227-4ad6-4a44-8d9d-5e2c40b083f4"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1746901572,
+        "httpOnly": false,
+        "name": "_gid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GA1.2.892554643.1746815173"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375173,
+        "httpOnly": false,
+        "name": "directCrm-session",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "%7B%22deviceGuid%22%3A%22bb4ea5e2-71ce-4d98-ae4e-4f445dbe1e77%22%7D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375174,
+        "httpOnly": false,
+        "name": "_ga_QTFZM0D0BE",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS2.1.s1746815174$o1$g0$t1746815174$j60$l0$h0"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_page_init_referring_domain",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX1%2FlNj3eWUsQxN3xvPivO%2FER6WOjr5n9Xt0%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_page_init_referrer",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX1%2Bw1Xwvrl%2F%2Bd6VsD7wVyIVaJ2aCyFBkx%2Bs%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1746816974,
+        "httpOnly": false,
+        "name": "_ym_visorc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "w"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_user_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX1%2FnUeq5yptSTT7v4kpgZHbi1mCf%2B8ePmIA%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_trait",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX19CecdsuO3nmLtqPUMPaPQS22VUAPNXFhY%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1781375174,
+        "httpOnly": false,
+        "name": "_ga",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GA1.1.750292342.1746815173"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351172,
+        "httpOnly": false,
+        "name": "rl_anonymous_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "RudderEncrypt%3AU2FsdGVkX19EIq8JlOscM1I04DVb4ogAkAcH1ODd%2Fz1MVY0Okab%2FsOpzSjbad3wQFN9Pf9c2NovdP880wPO00g%3D%3D"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1749407172,
+        "httpOnly": false,
+        "name": "kuf_VCH_promo_vas",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351170,
+        "httpOnly": false,
+        "name": "lang",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "ru"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1778351173,
+        "httpOnly": false,
+        "name": "_ym_uid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1746815174576950828"
+    },
+    {
+        "domain": ".kufar.by",
+        "expiry": 1754591174,
+        "httpOnly": false,
+        "name": "_gcl_au",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1.1.509278687.1746815174"
+    }
+]
