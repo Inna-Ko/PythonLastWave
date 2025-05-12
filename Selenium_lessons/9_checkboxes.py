@@ -18,3 +18,8 @@ driver.find_element(*NINTH_ELEMENT).click()
 assert "active" in driver.find_element(*FOURTH_ELEMENT).get_attribute("class"), "Чек-бокс 4 не выбран"
 assert "active" in driver.find_element(*NINTH_ELEMENT).get_attribute("class"), "Чек-бокс 9 не выбран"
 
+driver.find_element(*FOURTH_ELEMENT).click()
+driver.find_element(*NINTH_ELEMENT).click()
+
+assert "active" not in driver.find_element(*FOURTH_ELEMENT).get_attribute("class"), "Чек-бокс 4 выбран"
+assert "active" not in driver.find_element(*NINTH_ELEMENT).get_attribute("class"), "Чек-бокс 9 выбран"
