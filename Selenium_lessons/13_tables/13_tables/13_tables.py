@@ -6,7 +6,7 @@ import os
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1920,1080")
 preferences = {
-    "download.default_directory": os.path.join(os.getcwd(), "13_tables\\downloads"),
+    "download.default_directory": os.path.join(os.getcwd(), "downloads"),
     "safebrowsing.enabled" : True,
     "download.prompt_for_download": False,
 }
