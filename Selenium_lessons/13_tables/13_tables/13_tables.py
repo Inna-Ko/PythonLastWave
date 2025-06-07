@@ -31,4 +31,5 @@ print(table.get_cell_content(2, 3))
 print(table.get_row_content(8))
 table.download_by_first_value("Senior QA Lead")
 table.delete_row_by_value("Senior QA Lead")   # без подтверждения удаления
-input()
+
+time.sleep(5)
