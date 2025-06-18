@@ -16,5 +16,3 @@ def test_api_methods(method_name, payload, expected_status):
     assert response.status_code == expected_status
 
 
-# Task 2
-
