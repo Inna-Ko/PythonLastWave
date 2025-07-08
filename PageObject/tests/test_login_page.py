@@ -1,5 +1,5 @@
 import time
-from base.base_test import BaseTest
+from PageObject.base.base_test import BaseTest
 
 
 class TestLoginPage(BaseTest):
@@ -12,6 +12,3 @@ class TestLoginPage(BaseTest):
         self.login_page.click_submit_button()
         self.profile_page.is_opened()
         self.profile_page.click_host_meeting()
-
-
-        self.login_page.
