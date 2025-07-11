@@ -1,5 +1,5 @@
 import time
-from PageObject.base.base_test import BaseTest
+from Page_Object.base.base_test import BaseTest
 
 
 class TestLoginPage(BaseTest):
