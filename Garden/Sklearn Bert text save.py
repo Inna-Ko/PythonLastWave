@@ -3,6 +3,7 @@ import torch
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from torch.utils.data import DataLoader, Dataset
+from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 import json
 
@@ -10,51 +11,55 @@ import json
 with open('data.txt', 'r', encoding='utf-8') as file:
     data = json.load(file)
 
+# Извлечение текстов и меток
 texts = [item["text"] for item in data]
-labels = [1 if item["label"] == "позитивный" else 0 for item in data]
+labels = [item["label"] for item in data]  # Теперь метки текстовые
 
+# Разделение данных на обучающую и тестовую выборки
 X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
-# ======= Создание пользовательского датасета
-class TextDataset(Dataset):
-    def __init__(self, texts, labels, tokenizer, max_length=512):
-        self.texts = texts
-        self.labels = labels
-        self.tokenizer = tokenizer
-        self.max_length = max_length
+# Инициализация токенизатора BERT
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-    def __len__(self):
-        return len(self.texts)
+# Токенизация данных
+train_encodings = tokenizer(X_train, truncation=True, padding=True)
+test_encodings = tokenizer(X_test, truncation=True, padding=True)
+
+# Преобразование меток в числовой формат (например, с помощью Label Encoding)
+all_labels = list(set(y_train) | set(y_test))  # Уникальные метки из обоих наборов
+
+label_encoder = LabelEncoder()
+label_encoder.fit(all_labels)  # Обучаем на всех метках
+
+y_train_encoded = label_encoder.transform(y_train)
+y_test_encoded = label_encoder.transform(y_test)
+
+
+# Преобразование в PyTorch Dataset
+class CustomDataset(torch.utils.data.Dataset):
+    def __init__(self, encodings, labels):
+        self.encodings = encodings
+        self.labels = labels
 
     def __getitem__(self, idx):
-        text = self.texts[idx]
-        label = self.labels[idx]
-        encoding = self.tokenizer.encode_plus(
-            text,
-            add_special_tokens=True,
-            max_length=self.max_length,
-            return_token_type_ids=False,
-            padding='max_length',
-            truncation=True,
-            return_attention_mask=True,
-            return_tensors='pt',
-        )
-        return {
-            'input_ids': encoding['input_ids'].flatten(),
-            'attention_mask': encoding['attention_mask'].flatten(),
-            'labels': torch.tensor(label, dtype=torch.long)
-        }
+        item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+        item['labels'] = torch.tensor(self.labels[idx])
+        return item
+
+    def __len__(self):
+        return len(self.labels)
+
+
+# Создание объектов Dataset
+train_dataset = CustomDataset(train_encodings, y_train_encoded)
+test_dataset = CustomDataset(test_encodings, y_test_encoded)
+
+train_loader = DataLoader(train_dataset, batch_size=2, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=2)
 
 # ======= Инициализация модели и токенизатора
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
-
-# ======= Подготовка данных для DataLoader
-train_dataset = TextDataset(X_train, y_train, tokenizer)
-test_dataset = TextDataset(X_test, y_test, tokenizer)
-
-train_loader = DataLoader(train_dataset, batch_size=2, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=2)
 
 # ======= Обучение модели
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

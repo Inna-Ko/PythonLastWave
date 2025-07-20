@@ -44,4 +44,5 @@ while True:
     if user_input.lower() == 'exit':
         break
     prediction = predict(user_input)
-    print(f"Предсказанный класс: {'позитивный' if prediction == 1 else 'негативный'}")
+    # print(f"Предсказанный класс: {'позитивный' if prediction == 1 else 'негативный'}")
+    print(prediction)
