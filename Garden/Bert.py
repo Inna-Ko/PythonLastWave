@@ -1,7 +1,7 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 from torch.utils.data import DataLoader, Dataset
-from transformers import AdamW
+from transformers import AdamWeightDecay
 
 # Загрузка токенизатора
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -38,7 +38,7 @@ dataset = CustomDataset(inputs, labels)
 dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
 
 # Оптимизатор
-optimizer = AdamW(model.parameters(), lr=5e-5)
+optimizer = AdamWeightDecay(model.parameters(), lr=5e-5)
 
 # Обучение
 model.train()
